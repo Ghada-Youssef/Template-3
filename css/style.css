@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(247, 243, 243);
+}
+/* ///////////////////// Main-section /////////////////// */
+.navbar{
+    width: 100% ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    opacity: .9;
+}
+.social-icons{
+    position: fixed;
+    top: 30%;
+    right: 45px;
+    z-index: 5;
+}
+.social-icons a{
+    font-size: 50px;
+    color: rgb(23, 51, 23);
+}
+.social-icons a:hover{
+    color: rgb(125, 179, 161);
+}
+/* //////////////////// translate-section ////////////////// */
+.copyToClip ,.copied{
+    display: none;
+    background: rgb(229, 243, 238);
+    left: 90px;
+    text-align: center;
+    margin-top: -20px;
+    border-radius: 0 10px 10px;
+}
+.btn-copy:hover{
+border: 2px solid rgb(20, 19, 19);
+background: rgb(230, 222, 222);
+
+}
+.btn-copy:hover+ .copyToClip{
+    display: block;
+}
+.btn-copy:active ~ .copyToClip{
+    display: none;
+}
+.btn-copy:active ~ .copied{
+    display: block;
+}
+.btn-ok{
+    background: rgb(188, 200, 233);
+}
+.btn-ok:hover{
+    background-color: rgb(220, 224, 233);
+}
+.form-group label a{
+    color: rgb(61, 126, 86);
+    text-decoration: none;
+    font-weight: 600;
+}
+.form-group label a:hover{
+    color: rgb(121, 163, 131);
+}
+/* /////////////////////// bg-image section ////////////////////// */
+.hidden-section1{
+    background-image: url(../images/bg-img.jpg);
+}
+.hidden-section2{
+    background-image: url(../images/bg-img2.jpg);
+}
+.hidden-section{
+    width: 100%;
+    height:400px;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;  
+    overflow:auto;
+}
+.overlay-hid{
+    width: 100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top:0;
+    left: 0;
+}
+/* //////////////////////// popular-destinations-section //////////////////*/
+.card-hvr:before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top:0;
+    left: 0;
+    background-color: aqua;
+    transition: .8s;
+    opacity: 0;
+}
+.card-hvr:hover::before{
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+}
+.card-hvr:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom:0;
+    right: 0;
+    background-color: aqua;
+    transition: .8s;
+    opacity: 0;
+}
+.card-hvr:hover::after{
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+}
+/* ///////////////////// thanksFor-section /////////////////// */
+.crd-img{
+    transition: .8s;
+}
+.crd-img:hover{
+    transform: scale(.9,.9);
+    transition: .8s;
+}
+.crd-img:hover .card-img-overlay{
+    background: rgba(2,0,36,0.6);
+    background: linear-gradient(0deg, rgba(2,0,36,.2) 0%, rgba(31,31,142,.2) 35%, rgba(0,212,255,.2) 100%);
+}
+/* /////////////// egypt-news section ///////////////// */
+.eg-news-img{
+    transition: .8s;
+}
+.eg-news-img:hover{
+    transform: scale(1.2,1.2);
+}
+.btn-news:hover{
+    background: rgb(190, 186, 186);
+}
+.img-div1{
+    clip-path: polygon(0% 0%, 15% 100%, 100% 100%,100% 0%);
+}
+.img-div2{
+    clip-path: polygon(0% 0%, 0% 100%, 85% 100%,100% 0%);
+}
+@media (max-width: 560px) {
+    .card-div1{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .img-div1,.img-div2{
+        
+        height: 230px;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+}
+/* ///////////// join-us-section //////////////// */
+.join-txt:hover{
+   color: rgb(29, 21, 21);
+}
+
